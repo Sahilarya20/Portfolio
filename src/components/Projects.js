@@ -21,7 +21,7 @@ const Projects = () => {
         'Data visualization with Chart.js'
       ],
       githubLink: '#',
-      liveLink: '#',
+      liveLink: 'https://mdm.polestarllp.com/login',
       category: 'Data Management',
       icon: <DatabaseOutlined />,
       color: '#1890ff'
@@ -42,7 +42,7 @@ const Projects = () => {
         'Intelligent Schedulers'
       ],
       githubLink: '#',
-      liveLink: '#',
+      liveLink: 'https://demo-wormhole.polestarllp.com/login',
       category: 'Data Integration',
       icon: <ApiOutlined />,
       color: '#722ed1'

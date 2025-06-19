@@ -10,8 +10,8 @@ const Skills = () => {
       icon: <CodeOutlined />,
       color: '#1890ff',
       skills: [
+        { name: 'C++', level: 95 },
         { name: 'JavaScript/TypeScript', level: 90 },
-        { name: 'C++', level: 85 },
         { name: 'PHP', level: 75 },
         { name: 'SQL', level: 85 },
         { name: 'HTML/CSS', level: 90 }
