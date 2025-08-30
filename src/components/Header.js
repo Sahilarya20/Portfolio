@@ -99,7 +99,7 @@ const Header = () => {
         </motion.div>
 
         {/* Desktop Menu and Theme Toggle */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }} className="desktop-section">
           <Menu
             mode="horizontal"
             items={menuItems}
@@ -114,7 +114,7 @@ const Header = () => {
           />
           
           <Tooltip title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }} className="desktop-theme-toggle">
               <SunOutlined 
                 style={{ 
                   color: isDarkMode ? '#9ca3af' : '#4c6ef5', 
@@ -142,20 +142,8 @@ const Header = () => {
           </Tooltip>
         </div>
 
-        {/* Mobile Menu Button and Theme Toggle */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <Tooltip title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
-            <Switch
-              checked={isDarkMode}
-              onChange={toggleTheme}
-              size="small"
-              style={{
-                backgroundColor: isDarkMode ? '#4c6ef5' : '#d9d9d9',
-              }}
-              className="mobile-theme-switch"
-            />
-          </Tooltip>
-          
+        {/* Mobile Menu Button Only */}
+        <div className="mobile-section">
           <Button
             type="text"
             icon={<MenuOutlined />}
@@ -164,7 +152,6 @@ const Header = () => {
             style={{
               fontSize: '18px',
               color: '#1890ff',
-              display: 'none',
             }}
           />
         </div>
@@ -205,16 +192,25 @@ const Header = () => {
           .desktop-menu {
             display: none !important;
           }
-          .mobile-menu-button {
+          .desktop-section {
+            display: none !important;
+          }
+          .desktop-theme-toggle {
+            display: none !important;
+          }
+          .mobile-section {
             display: block !important;
           }
-          .mobile-theme-switch {
+          .mobile-menu-button {
             display: block !important;
           }
         }
         
         @media (min-width: 769px) {
-          .mobile-theme-switch {
+          .mobile-section {
+            display: none !important;
+          }
+          .mobile-menu-button {
             display: none !important;
           }
         }
