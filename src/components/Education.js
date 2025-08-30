@@ -31,7 +31,7 @@ const Education = () => {
   };
 
   return (
-    <section id="education" style={{ padding: '100px 0', background: '#f8f9fa' }}>
+    <section id="education" style={{ padding: '100px 0', background: 'var(--bg-secondary)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -44,7 +44,7 @@ const Education = () => {
             Education
           </h2>
           <div style={{ width: '60px', height: '4px', background: '#1890ff', margin: '0 auto' }} />
-          <p style={{ fontSize: '1.2rem', color: '#666', marginTop: '20px', maxWidth: '600px', margin: '20px auto 0' }}>
+          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginTop: '20px', maxWidth: '600px', margin: '20px auto 0' }}>
             My academic journey and educational background that laid the foundation for my career in technology.
           </p>
         </motion.div>
@@ -109,12 +109,12 @@ const Education = () => {
                 <div style={{ padding: '40px' }}>
                   <Row gutter={[32, 32]}>
                     <Col xs={24} lg={12}>
-                      <h4 style={{ fontSize: '1.4rem', fontWeight: '600', marginBottom: '20px', color: '#333' }}>
+                      <h4 style={{ fontSize: '1.4rem', fontWeight: '600', marginBottom: '20px', color: 'var(--text-primary)' }}>
                         Academic Highlights
                       </h4>
                       <ul style={{ paddingLeft: '20px', margin: 0 }}>
                         {education.highlights.map((highlight, index) => (
-                          <li key={index} style={{ marginBottom: '12px', color: '#666', lineHeight: 1.6, fontSize: '1rem' }}>
+                          <li key={index} style={{ marginBottom: '12px', color: 'var(--text-secondary)', lineHeight: 1.6, fontSize: '1rem' }}>
                             {highlight}
                           </li>
                         ))}
@@ -122,7 +122,7 @@ const Education = () => {
                     </Col>
 
                     <Col xs={24} lg={12}>
-                      <h4 style={{ fontSize: '1.4rem', fontWeight: '600', marginBottom: '20px', color: '#333' }}>
+                      <h4 style={{ fontSize: '1.4rem', fontWeight: '600', marginBottom: '20px', color: 'var(--text-primary)' }}>
                         Relevant Coursework
                       </h4>
                       <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>

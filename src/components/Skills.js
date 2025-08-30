@@ -104,7 +104,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" style={{ padding: '100px 0', background: '#fff' }}>
+    <section id="skills" style={{ padding: '100px 0', background: 'var(--bg-primary)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -117,7 +117,7 @@ const Skills = () => {
             Technical Skills
           </h2>
           <div style={{ width: '60px', height: '4px', background: '#1890ff', margin: '0 auto' }} />
-          <p style={{ fontSize: '1.2rem', color: '#666', marginTop: '20px', maxWidth: '600px', margin: '20px auto 0' }}>
+          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginTop: '20px', maxWidth: '600px', margin: '20px auto 0' }}>
             A comprehensive overview of my technical expertise and proficiency levels across various technologies.
           </p>
         </motion.div>
@@ -159,7 +159,7 @@ const Skills = () => {
                       >
                         {category.icon}
                       </div>
-                      <h3 style={{ fontSize: '1.3rem', fontWeight: '600', color: '#333', margin: 0 }}>
+                      <h3 style={{ fontSize: '1.3rem', fontWeight: '600', color: 'var(--text-primary)', margin: 0 }}>
                         {category.title}
                       </h3>
                     </div>
@@ -168,10 +168,10 @@ const Skills = () => {
                       {category.skills.map((skill, skillIndex) => (
                         <div key={skillIndex} style={{ marginBottom: '20px' }}>
                           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                            <span style={{ fontSize: '1rem', color: '#333', fontWeight: '500' }}>
+                            <span style={{ fontSize: '1rem', color: 'var(--text-primary)', fontWeight: '500' }}>
                               {skill.name}
                             </span>
-                            <span style={{ fontSize: '0.9rem', color: '#666' }}>
+                            <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
                               {skill.level}%
                             </span>
                           </div>

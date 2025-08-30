@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { ConfigProvider } from 'antd';
+import { ConfigProvider, theme } from 'antd';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'antd/dist/reset.css';
 
+import { ThemeProvider, useTheme } from './contexts/ThemeContext';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -15,20 +16,9 @@ import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-const theme = {
-  token: {
-    colorPrimary: '#1890ff',
-    colorSuccess: '#52c41a',
-    colorWarning: '#faad14',
-    colorError: '#f5222d',
-    colorInfo: '#13c2c2',
-    fontSize: 16,
-    borderRadius: 8,
-    fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif',
-  },
-};
+const AppContent = () => {
+  const { theme: currentTheme, isDarkMode } = useTheme();
 
-function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -39,7 +29,12 @@ function App() {
   }, []);
 
   return (
-    <ConfigProvider theme={theme}>
+    <ConfigProvider 
+      theme={{
+        ...currentTheme,
+        algorithm: isDarkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
+      }}
+    >
       <div className="App">
         <Header />
         <Hero />
@@ -53,6 +48,14 @@ function App() {
         <Footer />
       </div>
     </ConfigProvider>
+  );
+};
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 

@@ -12,7 +12,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" style={{ padding: '100px 0', background: '#f8f9fa' }}>
+    <section id="about" style={{ padding: '100px 0', background: 'var(--bg-secondary)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -35,20 +35,20 @@ const About = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h3 style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '2rem', color: '#333' }}>
+              <h3 style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '2rem', color: 'var(--text-primary)' }}>
                 Software Engineer & Problem Solver
               </h3>
-              <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', color: '#666' }}>
+              <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>
                 I'm a passionate Software Engineer with expertise in building scalable B2B analytics platforms. 
                 Currently working at <strong>Polestar Analytics</strong>, where I've built 1Platform - a comprehensive 
                 SaaS solution for managing ETL transformations and hierarchical data.
               </p>
-              <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', color: '#666' }}>
+              <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>
                 My experience spans across <strong>React.js, Node.js, PostgreSQL</strong>, and cloud technologies. 
                 I've successfully delivered performance improvements of up to <strong>30%</strong> through optimization 
                 techniques and have collaborated with cross-functional teams working on Python and Azure-based data services.
               </p>
-              <p style={{ fontSize: '1.1rem', lineHeight: 1.8, color: '#666' }}>
+              <p style={{ fontSize: '1.1rem', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
                 I'm driven by solving complex problems and building solutions that make a real impact. 
                 From reducing processing times by 25% to implementing Process Automation using LLM models, 
                 I constantly strive for excellence in every project.
@@ -120,8 +120,8 @@ const About = () => {
                 bodyStyle={{ padding: '30px' }}
               >
                 <RocketOutlined style={{ fontSize: '3rem', color: '#1890ff', marginBottom: '20px' }} />
-                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px' }}>Performance Optimization</h4>
-                <p style={{ color: '#666', lineHeight: 1.6 }}>
+                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>Performance Optimization</h4>
+                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                   Boosted API performance by 30% through server-side pagination and lazy loading, 
                   reducing network payload from 2MB to 20KB/page.
                 </p>
@@ -139,8 +139,8 @@ const About = () => {
                 bodyStyle={{ padding: '30px' }}
               >
                 <TeamOutlined style={{ fontSize: '3rem', color: '#52c41a', marginBottom: '20px' }} />
-                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px' }}>Full-Stack Development</h4>
-                <p style={{ color: '#666', lineHeight: 1.6 }}>
+                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>Full-Stack Development</h4>
+                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                   Built complete B2B analytics platforms using React.js, Node.js, and PostgreSQL, 
                   collaborating with cross-functional teams on data services.
                 </p>
@@ -158,8 +158,8 @@ const About = () => {
                 bodyStyle={{ padding: '30px' }}
               >
                 <TrophyOutlined style={{ fontSize: '3rem', color: '#faad14', marginBottom: '20px' }} />
-                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px' }}>Problem Solving</h4>
-                <p style={{ color: '#666', lineHeight: 1.6 }}>
+                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>Problem Solving</h4>
+                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
                   Solved 300+ DSA problems on LeetCode and achieved AIR 1214 in CodeKaze 2022, 
                   demonstrating strong analytical and problem-solving skills.
                 </p>

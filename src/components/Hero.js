@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Row, Col, Button, Space } from 'antd';
 import { GithubOutlined, LinkedinOutlined, MailOutlined, PhoneOutlined, DownloadOutlined, ArrowDownOutlined } from '@ant-design/icons';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ReactTyped as Typed } from 'react-typed';
 
 const Hero = () => {
+  // Multilingual names data
+  const nameTranslations = [
+    'Sahil Arya',
+    'साहिल आर्य',
+    '萨希尔·阿里亚',
+    'サヒル・アリア',
+    '사힐 아리아',
+  ];
+
+  const [currentNameIndex, setCurrentNameIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  // Auto-rotate names every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentNameIndex((prev) => (prev + 1) % nameTranslations.length);
+        setIsVisible(true);
+      }, 300);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [nameTranslations.length]);
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -82,9 +107,24 @@ const Hero = () => {
                 }}
               >
                 Hi, I'm{' '}
-                <span className="gradient-text" style={{ color: '#fff' }}>
-                  Sahil Arya
-                </span>
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={currentNameIndex}
+                    initial={{ opacity: 0, y: 20, scale: 0.8 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -20, scale: 0.8 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    style={{
+                      background: 'linear-gradient(45deg, #fff, #f0f0f0)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                      display: 'inline-block',
+                    }}
+                  >
+                    {nameTranslations[currentNameIndex]}
+                  </motion.span>
+                </AnimatePresence>
               </h1>
             </motion.div>
 

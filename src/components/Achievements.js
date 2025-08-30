@@ -79,7 +79,7 @@ const Achievements = () => {
   ];
 
   return (
-    <section id="achievements" style={{ padding: '100px 0', background: '#fff' }}>
+    <section id="achievements" style={{ padding: '100px 0', background: 'var(--bg-primary)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

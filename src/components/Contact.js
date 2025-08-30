@@ -69,7 +69,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" style={{ padding: '100px 0', background: '#f8f9fa' }}>
+    <section id="contact" style={{ padding: '100px 0', background: 'var(--bg-secondary)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

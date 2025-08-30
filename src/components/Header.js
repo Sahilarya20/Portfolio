@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { Layout, Menu, Button, Drawer } from 'antd';
-import { MenuOutlined, UserOutlined, ExperimentOutlined, ProjectOutlined, ToolOutlined, BookOutlined, TrophyOutlined, ContactsOutlined } from '@ant-design/icons';
+import { Layout, Menu, Button, Drawer, Switch, Tooltip } from 'antd';
+import { 
+  MenuOutlined, 
+  UserOutlined, 
+  ExperimentOutlined, 
+  ProjectOutlined, 
+  ToolOutlined, 
+  BookOutlined, 
+  TrophyOutlined, 
+  ContactsOutlined,
+  SunOutlined,
+  MoonOutlined
+} from '@ant-design/icons';
 import { motion } from 'framer-motion';
+import { useTheme } from '../contexts/ThemeContext';
 
 const { Header: AntHeader } = Layout;
 
 const Header = () => {
   const [visible, setVisible] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { isDarkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,9 +63,19 @@ const Header = () => {
           width: '100%',
           zIndex: 1000,
           padding: '0 20px',
-          background: scrolled ? 'rgba(255, 255, 255, 0.95)' : 'rgba(255, 255, 255, 0.1)',
+          background: scrolled 
+            ? isDarkMode 
+              ? 'rgba(15, 15, 26, 0.95)' 
+              : 'rgba(255, 255, 255, 0.95)'
+            : isDarkMode 
+              ? 'rgba(15, 15, 26, 0.1)' 
+              : 'rgba(255, 255, 255, 0.1)',
           backdropFilter: 'blur(10px)',
-          borderBottom: scrolled ? '1px solid #f0f0f0' : 'none',
+          borderBottom: scrolled 
+            ? isDarkMode 
+              ? '1px solid #2d3748' 
+              : '1px solid #f0f0f0' 
+            : 'none',
           transition: 'all 0.3s ease',
           display: 'flex',
           alignItems: 'center',
@@ -75,36 +98,95 @@ const Header = () => {
           Sahil Arya
         </motion.div>
 
-        {/* Desktop Menu */}
-        <Menu
-          mode="horizontal"
-          items={menuItems}
-          style={{
-            background: 'transparent',
-            border: 'none',
-            fontSize: '16px',
-            minWidth: '600px',
-            justifyContent: 'flex-end',
-          }}
-          className="desktop-menu"
-        />
+        {/* Desktop Menu and Theme Toggle */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <Menu
+            mode="horizontal"
+            items={menuItems}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              fontSize: '16px',
+              minWidth: '600px',
+              justifyContent: 'flex-end',
+            }}
+            className="desktop-menu"
+          />
+          
+          <Tooltip title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <SunOutlined 
+                style={{ 
+                  color: isDarkMode ? '#9ca3af' : '#4c6ef5', 
+                  fontSize: '16px',
+                  transition: 'color 0.3s ease'
+                }} 
+              />
+              <Switch
+                checked={isDarkMode}
+                onChange={toggleTheme}
+                size="default"
+                style={{
+                  backgroundColor: isDarkMode ? '#4c6ef5' : '#d9d9d9',
+                }}
+                className="theme-switch"
+              />
+              <MoonOutlined 
+                style={{ 
+                  color: isDarkMode ? '#4c6ef5' : '#9ca3af', 
+                  fontSize: '16px',
+                  transition: 'color 0.3s ease'
+                }} 
+              />
+            </div>
+          </Tooltip>
+        </div>
 
-        {/* Mobile Menu Button */}
-        <Button
-          type="text"
-          icon={<MenuOutlined />}
-          onClick={() => setVisible(true)}
-          className="mobile-menu-button"
-          style={{
-            fontSize: '18px',
-            color: '#1890ff',
-            display: 'none',
-          }}
-        />
+        {/* Mobile Menu Button and Theme Toggle */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+          <Tooltip title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
+            <Switch
+              checked={isDarkMode}
+              onChange={toggleTheme}
+              size="small"
+              style={{
+                backgroundColor: isDarkMode ? '#4c6ef5' : '#d9d9d9',
+              }}
+              className="mobile-theme-switch"
+            />
+          </Tooltip>
+          
+          <Button
+            type="text"
+            icon={<MenuOutlined />}
+            onClick={() => setVisible(true)}
+            className="mobile-menu-button"
+            style={{
+              fontSize: '18px',
+              color: '#1890ff',
+              display: 'none',
+            }}
+          />
+        </div>
 
         {/* Mobile Drawer */}
         <Drawer
-          title="Navigation"
+          title={
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <span>Navigation</span>
+              <Tooltip title={isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <SunOutlined style={{ fontSize: '14px' }} />
+                  <Switch
+                    checked={isDarkMode}
+                    onChange={toggleTheme}
+                    size="small"
+                  />
+                  <MoonOutlined style={{ fontSize: '14px' }} />
+                </div>
+              </Tooltip>
+            </div>
+          }
           placement="right"
           onClose={() => setVisible(false)}
           open={visible}
@@ -126,6 +208,15 @@ const Header = () => {
           .mobile-menu-button {
             display: block !important;
           }
+          .mobile-theme-switch {
+            display: block !important;
+          }
+        }
+        
+        @media (min-width: 769px) {
+          .mobile-theme-switch {
+            display: none !important;
+          }
         }
         
         .ant-menu-horizontal {
@@ -140,6 +231,14 @@ const Header = () => {
         .ant-menu-item:hover {
           border-bottom-color: #1890ff !important;
           color: #1890ff !important;
+        }
+        
+        .theme-switch .ant-switch-handle {
+          transition: all 0.3s ease !important;
+        }
+        
+        .theme-switch:hover {
+          box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
         }
       `}</style>
     </motion.div>

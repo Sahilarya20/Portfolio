@@ -73,7 +73,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" style={{ padding: '100px 0', background: '#f8f9fa' }}>
+    <section id="projects" style={{ padding: '100px 0', background: 'var(--bg-secondary)' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -86,7 +86,7 @@ const Projects = () => {
             Featured Projects
           </h2>
           <div style={{ width: '60px', height: '4px', background: '#1890ff', margin: '0 auto' }} />
-          <p style={{ fontSize: '1.2rem', color: '#666', marginTop: '20px', maxWidth: '600px', margin: '20px auto 0' }}>
+          <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginTop: '20px', maxWidth: '600px', margin: '20px auto 0' }}>
             Showcasing innovative solutions built with cutting-edge technologies to solve real-world problems.
           </p>
         </motion.div>
@@ -164,16 +164,16 @@ const Projects = () => {
                         <Tag color={project.color} style={{ marginBottom: '12px', fontSize: '12px', padding: '4px 12px', borderRadius: '12px' }}>
                           {project.category}
                         </Tag>
-                        <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '12px', color: '#333' }}>
+                        <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '12px', color: 'var(--text-primary)' }}>
                           {project.title}
                         </h3>
-                        <p style={{ color: '#666', lineHeight: 1.6, marginBottom: '16px' }}>
+                        <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6, marginBottom: '16px' }}>
                           {project.description}
                         </p>
                       </div>
 
                       <div style={{ marginBottom: '24px' }}>
-                        <h5 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '12px', color: '#333' }}>
+                        <h5 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '12px', color: 'var(--text-primary)' }}>
                           Key Features:
                         </h5>
                         <Row gutter={[8, 8]}>
@@ -181,7 +181,7 @@ const Projects = () => {
                             <Col key={idx} span={12}>
                               <div style={{ display: 'flex', alignItems: 'center', marginBottom: '6px' }}>
                                 <SettingOutlined style={{ color: project.color, marginRight: '8px', fontSize: '12px' }} />
-                                <span style={{ fontSize: '0.9rem', color: '#666' }}>{feature}</span>
+                                <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>{feature}</span>
                               </div>
                             </Col>
                           ))}
@@ -189,7 +189,7 @@ const Projects = () => {
                       </div>
 
                       <div style={{ marginBottom: '24px' }}>
-                        <h5 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '12px', color: '#333' }}>
+                        <h5 style={{ fontSize: '1rem', fontWeight: '600', marginBottom: '12px', color: 'var(--text-primary)' }}>
                           Technologies:
                         </h5>
                         <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
