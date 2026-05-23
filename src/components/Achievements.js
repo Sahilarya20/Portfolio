@@ -7,7 +7,7 @@ const Achievements = () => {
   const achievements = [
     {
       id: 1,
-      title: 'Quarterly Impact Award - Dashing Debut',
+      title: 'Quarterly Impact Award – Dashing Debut',
       organization: 'Polestar Analytics',
       description: 'Recognized for exceptional performance and outstanding contribution during the first quarter at Polestar Analytics.',
       icon: <TrophyOutlined />,
@@ -17,6 +17,16 @@ const Achievements = () => {
     },
     {
       id: 2,
+      title: 'Quarterly Impact Award – Rising Star',
+      organization: 'Polestar Analytics',
+      description: 'Awarded Rising Star recognition for consistently high impact and leadership contributions across quarters.',
+      icon: <StarOutlined />,
+      color: '#eb2f96',
+      date: '2024',
+      category: 'Professional Award'
+    },
+    {
+      id: 3,
       title: 'Appreciation Certificate for ProfitPulse',
       organization: 'Polestar Analytics',
       description: 'Received appreciation for developing high-quality asset ProfitPulse that significantly improved financial analytics for clients.',
@@ -26,54 +36,44 @@ const Achievements = () => {
       category: 'Project Recognition'
     },
     {
-      id: 3,
-      title: 'Google HashCode 2022',
-      organization: 'Google',
-      description: 'Achieved Global Rank 2421 and Indian Rank 830 in the prestigious Google HashCode 2022 programming competition.',
-      icon: <CrownOutlined />,
-      color: '#1890ff',
-      date: '2022',
-      category: 'Programming Competition'
-    },
-    {
       id: 4,
-      title: 'CodeKaze 2022 - AIR 1214',
-      organization: 'CodeStudio',
-      description: 'Secured All India Rank 1214 in CodeKaze 2022, demonstrating strong problem-solving and algorithmic skills.',
+      title: '400+ DSA Problems Solved',
+      organization: 'LeetCode, CodeStudio & CodeChef',
+      description: 'Solved 400+ Data Structures and Algorithms problems across LeetCode, CodeStudio, and CodeChef, demonstrating strong problem-solving skills.',
       icon: <CodeOutlined />,
-      color: '#722ed1',
-      date: '2022',
-      category: 'Programming Competition'
+      color: '#1890ff',
+      date: 'Ongoing',
+      category: 'Competitive Programming'
     }
   ];
 
   const stats = [
     {
-      title: 'LeetCode Problems Solved',
-      value: 300,
+      title: 'DSA Problems Solved',
+      value: 400,
       suffix: '+',
       icon: <CodeOutlined />,
       color: '#1890ff'
     },
     {
-      title: 'CodeStudio Problems',
-      value: 150,
-      suffix: '+',
-      icon: <StarOutlined />,
-      color: '#52c41a'
-    },
-    {
-      title: 'CodeChef Problems',
-      value: 100,
-      suffix: '+',
+      title: 'Quarterly Impact Awards',
+      value: 2,
+      suffix: '',
       icon: <TrophyOutlined />,
       color: '#faad14'
     },
     {
-      title: 'Competitive Programming Contests',
-      value: 50,
+      title: 'Enterprise Clients Served',
+      value: 4,
       suffix: '+',
       icon: <TeamOutlined />,
+      color: '#52c41a'
+    },
+    {
+      title: 'Microservices Architected',
+      value: 5,
+      suffix: '+',
+      icon: <StarOutlined />,
       color: '#722ed1'
     }
   ];

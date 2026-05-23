@@ -11,17 +11,15 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
+    // Check for saved theme preference or default to dark mode
     const savedTheme = localStorage.getItem('portfolio-theme');
     if (savedTheme) {
       setIsDarkMode(savedTheme === 'dark');
     } else {
-      // Check system preference
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      setIsDarkMode(prefersDark);
+      setIsDarkMode(true);
     }
   }, []);
 

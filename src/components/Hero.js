@@ -142,10 +142,10 @@ const Hero = () => {
               >
                 <Typed
                   strings={[
-                    'Software Engineer',
+                    'Senior Software Engineer',
                     'Full Stack Developer',
-                    'React.js Specialist',
-                    'Node.js Expert',
+                    'Microfrontend Architect',
+                    'AI & LLM Integrations',
                     'Problem Solver'
                   ]}
                   typeSpeed={50}
@@ -167,8 +167,8 @@ const Hero = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Building innovative B2B analytics platforms and delivering high-performance
-                solutions that reduce processing time and boost efficiency.
+                Building enterprise-scale analytics platforms, AI-powered automation systems,
+                and distributed microservice architectures that drive measurable business impact.
               </p>
             </motion.div>
 
@@ -209,7 +209,7 @@ const Hero = () => {
                   onClick={() => {
                     // Download resume functionality
                     const link = document.createElement('a');
-                    link.href = '/Sahil_resume.pdf';
+                    link.href = '/Sahil_Arya_Resume.pdf';
                     link.download = 'Sahil_Arya_Resume.pdf';
                     document.body.appendChild(link);
                     link.click();

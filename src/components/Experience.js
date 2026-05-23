@@ -9,35 +9,33 @@ const Experience = () => {
   
   const experiences = [
     {
-      title: 'Software Engineer (Analyst)',
+      title: 'Senior Software Engineer',
       company: 'Polestar Analytics',
       location: 'Noida, India',
-      duration: 'November 2023 – Present',
+      duration: 'September 2025 – Present',
       achievements: [
-        'Building 1Platform, a B2B analytics SaaS platform for managing ETL transformations and hierarchical data using React.js, Node.js, and PostgreSQL',
-        'Built core modules (Masters, Pipelines, Data Lake, Entity, Approval Workflow, Data Model, Execution Logs) reducing processing time by 25%',
-        'Refactored state management from prop drilling to Redux, improving code maintainability across 12 components',
-        'Designed Process Automation data module using LLM models to extract and transform data from documents',
-        'Boosted API performance by 30% (600ms → 420ms) via server-side pagination and lazy loading',
-        'Reduced network payload from 2MB to 20KB/page for Delta Lake queries, cutting network transfer by 90%',
-        'Delivered tailored PoCs for clients including Knipper, BDS, Zydus, Insigneo and more'
+        'Led frontend modernization by migrating a production-scale monolithic application to a Microfrontend Architecture, enabling 4+ independent teams to ship in parallel, improving scalability, deployment independence, and maintainability across business modules.',
+        'Architected distributed backend systems by decomposing a Node.js monolith into 5+ Python microservices using gRPC, RabbitMQ, and Redis, enabling efficient asynchronous processing, fault isolation, and high-throughput inter-service communication.',
+        'Engineered and launched PromoPulse, an AI-powered promotion analytics and optimization module that processes enterprise datasets from Databricks and applies LLM and predictive AI models to generate optimized promotional recommendations, scenario simulations, and forecasting insights for KPIs such as ROI, trade spend, revenue uplift, and campaign effectiveness.',
+        'Developed intelligent OCR and document automation systems using Claude 4.6 Sonnet, Llama 3, and vector-search-based retrieval pipelines to extract, classify, and transform unstructured enterprise documents with 92% extraction accuracy, supporting context windows up to 128K tokens for large-document processing workflows.'
       ],
-      technologies: ['React.js', 'Node.js', 'PostgreSQL', 'Redux', 'Azure', 'Python', 'LLM'],
+      technologies: ['React.js', 'Microfrontend', 'Python', 'gRPC', 'RabbitMQ', 'Redis', 'Databricks', 'LLM', 'Claude 4.6 Sonnet', 'Llama 3'],
       type: 'Full-time',
       primary: true
     },
     {
-      title: 'Software Engineer (Intern)',
-      company: 'DOB Publication',
-      location: 'Delhi, India',
-      duration: 'June 2022 – August 2022',
+      title: 'Software Engineer',
+      company: 'Polestar Analytics',
+      location: 'Noida, India',
+      duration: 'November 2023 – August 2025',
       achievements: [
-        'Developed an E-commerce platform from scratch using Next.js (frontend), PHP (backend), and MySQL (database)',
-        'Integrated Razorpay payment gateway for seamless transactions, increasing successful payment conversions',
-        'Created a custom admin panel to manage inventory, orders, and user data, improving operational efficiency'
+        'Engineered and scaled 1Platform, an enterprise-grade B2B analytics and ETL SaaS platform using React.js, Node.js, PostgreSQL, Azure, and Databricks, onboarding 4+ enterprise clients and enabling large-scale data ingestion, transformation, governance, and analytics workflows.',
+        'Built advanced ETL ingestion and transformation pipelines that automated complex manual SQL-based workflows, reducing data engineering effort by approximately 90% and significantly accelerating enterprise pipeline creation and execution.',
+        'Boosted API performance by ~30% (600ms → 420ms) using server-side pagination, lazy loading, and optimized Delta Lake querying strategies, reducing network payload from 2MB to 20KB/page and cutting network transfer overhead by approximately 90%.',
+        'Collaborated directly with 4 enterprise clients including Knipper, BDS, Zydus, and Insigneo to deliver tailored PoCs, workflow automations, analytics solutions, and enterprise data platforms aligned with business requirements.'
       ],
-      technologies: ['Next.js', 'PHP', 'MySQL', 'phpMyAdmin', 'Razorpay'],
-      type: 'Internship',
+      technologies: ['React.js', 'Node.js', 'PostgreSQL', 'Azure', 'Databricks', 'Python', 'ETL'],
+      type: 'Full-time',
       primary: false
     }
   ];

@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 
 const About = () => {
   const stats = [
-    { title: 'Years Experience', value: 2, suffix: '+', icon: <CodeOutlined /> },
-    { title: 'Projects Completed', value: 10, suffix: '+', icon: <RocketOutlined /> },
-    { title: 'LeetCode Problems', value: 300, suffix: '+', icon: <TrophyOutlined /> },
-    { title: 'Technologies Mastered', value: 15, suffix: '+', icon: <TeamOutlined /> },
+    { title: 'Years Experience', value: 3, suffix: '', icon: <CodeOutlined /> },
+    { title: 'Enterprise Clients', value: 4, suffix: '+', icon: <TeamOutlined /> },
+    { title: 'DSA Problems Solved', value: 400, suffix: '+', icon: <TrophyOutlined /> },
+    { title: 'Microservices Built', value: 5, suffix: '+', icon: <RocketOutlined /> },
   ];
 
   return (
@@ -36,22 +36,24 @@ const About = () => {
               viewport={{ once: true }}
             >
               <h3 style={{ fontSize: '2rem', fontWeight: '600', marginBottom: '2rem', color: 'var(--text-primary)' }}>
-                Software Engineer & Problem Solver
+                Senior Software Engineer & Systems Architect
               </h3>
               <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>
-                I'm a passionate Software Engineer with expertise in building scalable B2B analytics platforms. 
-                Currently working at <strong>Polestar Analytics</strong>, where I've built 1Platform - a comprehensive 
-                SaaS solution for managing ETL transformations and hierarchical data.
+                I'm a Senior Software Engineer at <strong>Polestar Analytics</strong> with 2+ years of experience building
+                enterprise-grade platforms. I've led the migration of a production monolith to a
+                <strong> Microfrontend Architecture</strong> enabling 4+ independent teams to ship in parallel, and
+                decomposed a Node.js backend into <strong>5+ Python microservices</strong> using gRPC, RabbitMQ, and Redis.
               </p>
               <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>
-                My experience spans across <strong>React.js, Node.js, PostgreSQL</strong>, and cloud technologies. 
-                I've successfully delivered performance improvements of up to <strong>30%</strong> through optimization 
-                techniques and have collaborated with cross-functional teams working on Python and Azure-based data services.
+                I engineered <strong>PromoPulse</strong> — an AI-powered promotion analytics module — integrating LLM and
+                predictive models with Databricks to generate ROI forecasting, scenario simulations, and campaign
+                effectiveness insights. I've also built intelligent OCR pipelines using <strong>Claude 4.6 Sonnet</strong> and
+                <strong> Llama 3</strong> achieving 92% extraction accuracy across enterprise documents.
               </p>
               <p style={{ fontSize: '1.1rem', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
-                I'm driven by solving complex problems and building solutions that make a real impact. 
-                From reducing processing times by 25% to implementing Process Automation using LLM models, 
-                I constantly strive for excellence in every project.
+                Beyond engineering, I work directly with enterprise clients — Knipper, BDS, Zydus, and Insigneo — to
+                deliver tailored analytics solutions. I'm a recipient of multiple <strong>Quarterly Impact Awards</strong> and
+                a strong believer in clean architecture, measurable impact, and continuous growth.
               </p>
             </motion.div>
           </Col>
@@ -120,10 +122,10 @@ const About = () => {
                 bodyStyle={{ padding: '30px' }}
               >
                 <RocketOutlined style={{ fontSize: '3rem', color: '#1890ff', marginBottom: '20px' }} />
-                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>Performance Optimization</h4>
+                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>AI & LLM Engineering</h4>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  Boosted API performance by 30% through server-side pagination and lazy loading, 
-                  reducing network payload from 2MB to 20KB/page.
+                  Built AI-powered systems using Claude 4.6 Sonnet, Llama 3, and vector-search pipelines achieving
+                  92% extraction accuracy on enterprise documents with 128K token support.
                 </p>
               </Card>
             </Col>
@@ -139,10 +141,10 @@ const About = () => {
                 bodyStyle={{ padding: '30px' }}
               >
                 <TeamOutlined style={{ fontSize: '3rem', color: '#52c41a', marginBottom: '20px' }} />
-                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>Full-Stack Development</h4>
+                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>Distributed Systems</h4>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  Built complete B2B analytics platforms using React.js, Node.js, and PostgreSQL, 
-                  collaborating with cross-functional teams on data services.
+                  Architected 5+ Python microservices using gRPC, RabbitMQ, and Redis enabling fault isolation,
+                  async processing, and high-throughput inter-service communication.
                 </p>
               </Card>
             </Col>
@@ -158,10 +160,10 @@ const About = () => {
                 bodyStyle={{ padding: '30px' }}
               >
                 <TrophyOutlined style={{ fontSize: '3rem', color: '#faad14', marginBottom: '20px' }} />
-                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>Problem Solving</h4>
+                <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>Performance & Scale</h4>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  Solved 300+ DSA problems on LeetCode and achieved AIR 1214 in CodeKaze 2022, 
-                  demonstrating strong analytical and problem-solving skills.
+                  Boosted API performance by ~30% (600ms → 420ms) and cut network payload 90% (2MB → 20KB/page)
+                  via Delta Lake query optimization and lazy loading strategies.
                 </p>
               </Card>
             </Col>

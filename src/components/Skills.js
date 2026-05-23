@@ -11,10 +11,10 @@ const Skills = () => {
       color: '#1890ff',
       skills: [
         { name: 'C++', level: 95 },
-        { name: 'JavaScript/TypeScript', level: 90 },
+        { name: 'JavaScript/TypeScript', level: 92 },
+        { name: 'Python', level: 85 },
         { name: 'PHP', level: 75 },
-        { name: 'SQL', level: 85 },
-        { name: 'HTML/CSS', level: 90 }
+        { name: 'SQL', level: 88 }
       ]
     },
     {
@@ -23,11 +23,11 @@ const Skills = () => {
       color: '#52c41a',
       skills: [
         { name: 'React.js', level: 95 },
-        { name: 'Node.js', level: 90 },
-        { name: 'Next.js', level: 85 },
+        { name: 'Node.js', level: 92 },
+        { name: 'FastAPI', level: 80 },
         { name: 'Ant Design', level: 90 },
-        { name: 'Chart.js', level: 80 },
-        { name: 'PrimeReact', level: 85 }
+        { name: 'Chart.js', level: 82 },
+        { name: 'Modular SCSS', level: 85 }
       ]
     },
     {
@@ -35,34 +35,34 @@ const Skills = () => {
       icon: <DatabaseOutlined />,
       color: '#722ed1',
       skills: [
-        { name: 'PostgreSQL', level: 85 },
-        { name: 'MySQL', level: 80 },
-        { name: 'MongoDB', level: 75 },
-        { name: 'Redis', level: 70 },
-        { name: 'phpMyAdmin', level: 80 }
+        { name: 'PostgreSQL', level: 88 },
+        { name: 'Redis', level: 80 },
+        { name: 'MySQL', level: 82 },
+        { name: 'Databricks / Delta Lake', level: 78 },
+        { name: 'RabbitMQ', level: 75 }
       ]
     },
     {
-      title: 'Developer Tools',
+      title: 'Developer & AI Tools',
       icon: <ToolOutlined />,
       color: '#fa8c16',
       skills: [
-        { name: 'Git/GitHub', level: 90 },
-        { name: 'VS Code', level: 95 },
-        { name: 'Azure Boards', level: 80 },
+        { name: 'GitHub', level: 92 },
+        { name: 'Azure Boards', level: 82 },
         { name: 'Jira', level: 85 },
-        { name: 'Eclipse', level: 75 }
+        { name: 'Copilot / Claude Code', level: 88 },
+        { name: 'Cursor', level: 85 }
       ]
     },
     {
-      title: 'Cloud & DevOps',
+      title: 'Cloud & Architecture',
       icon: <CloudOutlined />,
       color: '#13c2c2',
       skills: [
-        { name: 'Azure', level: 80 },
-        { name: 'Docker', level: 75 },
-        { name: 'CI/CD', level: 70 },
-        { name: 'AWS', level: 65 }
+        { name: 'Azure', level: 82 },
+        { name: 'Microfrontend Architecture', level: 88 },
+        { name: 'Microservices / gRPC', level: 82 },
+        { name: 'Distributed Systems', level: 80 }
       ]
     },
     {
@@ -70,12 +70,11 @@ const Skills = () => {
       icon: <BulbOutlined />,
       color: '#eb2f96',
       skills: [
-        { name: 'Data Structures & Algorithms', level: 90 },
-        { name: 'Object Oriented Programming', level: 85 },
-        { name: 'Database Management', level: 85 },
-        { name: 'System Design', level: 80 },
-        { name: 'Problem Solving', level: 95 },
-        { name: 'Leadership', level: 85 }
+        { name: 'Data Structures & Algorithms', level: 92 },
+        { name: 'OOP & DBMS', level: 88 },
+        { name: 'Team Leadership', level: 88 },
+        { name: 'Cross-functional Collaboration', level: 90 },
+        { name: 'Client-facing Delivery', level: 88 }
       ]
     }
   ];

@@ -8,7 +8,7 @@ const Education = () => {
     degree: 'Bachelor of Technology in Computer Science',
     institution: 'Maharaja Agrasen Institute of Technology',
     location: 'Delhi, India',
-    duration: 'August 2019 - June 2023',
+    duration: 'August 2019 – July 2023',
     cgpa: '8.50/10',
     highlights: [
       'Specialized in Computer Science and Engineering',
