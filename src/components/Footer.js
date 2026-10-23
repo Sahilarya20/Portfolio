@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row, Col, Space, Divider } from 'antd';
-import { GithubOutlined, LinkedinOutlined, MailOutlined, HeartFilled, ArrowUpOutlined } from '@ant-design/icons';
+import { GithubOutlined, LinkedinOutlined, MailOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
@@ -208,8 +208,7 @@ const Footer = () => {
               <p style={{ margin: 0, opacity: 0.8, textAlign: { xs: 'center', md: 'left' } }}>
                 © {new Date().getFullYear()} Sahil Arya
                 {/* © {new Date().getFullYear()} Sahil Arya. Made with{' '} */}
-                {/* <HeartFilled style={{ color: '#ff4d4f', margin: '0 4px' }} />
-                using React & Ant Design */}
+               
               </p>
             </Col>
             <Col xs={24} md={12} style={{ textAlign: { xs: 'center', md: 'right' }, marginTop: { xs: '16px', md: '0' } }}>
