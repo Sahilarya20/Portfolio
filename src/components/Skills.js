@@ -1,81 +1,45 @@
 import React from 'react';
-import { Row, Col, Card, Progress, Tag } from 'antd';
+import { Row, Col, Card, Tag } from 'antd';
 import { CodeOutlined, DatabaseOutlined, ToolOutlined, CloudOutlined, MobileOutlined, BulbOutlined } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Programming Languages',
+      title: 'Programming',
       icon: <CodeOutlined />,
       color: '#1890ff',
-      skills: [
-        { name: 'C++', level: 95 },
-        { name: 'JavaScript/TypeScript', level: 92 },
-        { name: 'Python', level: 85 },
-        { name: 'PHP', level: 75 },
-        { name: 'SQL', level: 88 }
-      ]
+      skills: ['JavaScript', 'TypeScript', 'Python', 'SQL', 'C++']
     },
     {
-      title: 'Frameworks & Libraries',
+      title: 'Frontend',
       icon: <MobileOutlined />,
       color: '#52c41a',
-      skills: [
-        { name: 'React.js', level: 95 },
-        { name: 'Node.js', level: 92 },
-        { name: 'FastAPI', level: 80 },
-        { name: 'Ant Design', level: 90 },
-        { name: 'Chart.js', level: 82 },
-        { name: 'Modular SCSS', level: 85 }
-      ]
+      skills: ['React.js', 'HTML', 'CSS', 'Ant Design', 'Responsive Interfaces', 'Reusable Components', 'Dashboards']
     },
     {
-      title: 'Databases & Tools',
-      icon: <DatabaseOutlined />,
-      color: '#722ed1',
-      skills: [
-        { name: 'PostgreSQL', level: 88 },
-        { name: 'Redis', level: 80 },
-        { name: 'MySQL', level: 82 },
-        { name: 'Databricks / Delta Lake', level: 78 },
-        { name: 'RabbitMQ', level: 75 }
-      ]
-    },
-    {
-      title: 'Developer & AI Tools',
+      title: 'Backend and Integration',
       icon: <ToolOutlined />,
       color: '#fa8c16',
-      skills: [
-        { name: 'GitHub', level: 92 },
-        { name: 'Azure Boards', level: 82 },
-        { name: 'Jira', level: 85 },
-        { name: 'Copilot / Claude Code', level: 88 },
-        { name: 'Cursor', level: 85 }
-      ]
+      skills: ['Node.js', 'Express.js', 'FastAPI', 'REST APIs', 'gRPC', 'Microservices', 'API Integration', 'Error Handling']
     },
     {
-      title: 'Cloud & Architecture',
-      icon: <CloudOutlined />,
-      color: '#13c2c2',
-      skills: [
-        { name: 'Azure', level: 82 },
-        { name: 'Microfrontend Architecture', level: 88 },
-        { name: 'Microservices / gRPC', level: 82 },
-        { name: 'Distributed Systems', level: 80 }
-      ]
+      title: 'Data Engineering',
+      icon: <DatabaseOutlined />,
+      color: '#722ed1',
+      skills: ['PostgreSQL', 'Redis', 'Databricks', 'Delta Lake', 'SQL Query Optimization', 'ETL Pipelines', 'Data Ingestion', 'Data Transformation', 'Data Quality']
     },
     {
-      title: 'Concepts & Soft Skills',
+      title: 'Generative AI',
       icon: <BulbOutlined />,
       color: '#eb2f96',
-      skills: [
-        { name: 'Data Structures & Algorithms', level: 92 },
-        { name: 'OOP & DBMS', level: 88 },
-        { name: 'Team Leadership', level: 88 },
-        { name: 'Cross-functional Collaboration', level: 90 },
-        { name: 'Client-facing Delivery', level: 88 }
-      ]
+      skills: ['LLMs', 'Claude Sonnet', 'Llama 3', 'Vector Search', 'Retrieval-Based Document Processing', 'Structured and Unstructured Data Extraction']
+    },
+    {
+      title: 'Engineering and Tools',
+      icon: <CloudOutlined />,
+      color: '#13c2c2',
+      skills: ['Microfrontend Architecture', 'Distributed Systems', 'RabbitMQ', 'OOP', 'Data Structures and Algorithms', 'DBMS', 'Performance Optimization', 'Git', 'GitHub', 'Microsoft Azure']
     }
   ];
 
@@ -117,7 +81,7 @@ const Skills = () => {
           </h2>
           <div style={{ width: '60px', height: '4px', background: '#1890ff', margin: '0 auto' }} />
           <p style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginTop: '20px', maxWidth: '600px', margin: '20px auto 0' }}>
-            A comprehensive overview of my technical expertise and proficiency levels across various technologies.
+            A comprehensive overview of my technical expertise across languages, frontend, backend, data engineering, and generative AI.
           </p>
         </motion.div>
 
@@ -163,29 +127,14 @@ const Skills = () => {
                       </h3>
                     </div>
 
-                    <div style={{ space: '16px' }}>
-                      {category.skills.map((skill, skillIndex) => (
-                        <div key={skillIndex} style={{ marginBottom: '20px' }}>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '8px' }}>
-                            <span style={{ fontSize: '1rem', color: 'var(--text-primary)', fontWeight: '500' }}>
-                              {skill.name}
-                            </span>
-                            <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
-                              {skill.level}%
-                            </span>
-                          </div>
-                          <Progress
-                            percent={skill.level}
-                            strokeColor={{
-                              '0%': category.color,
-                              '100%': category.color,
-                            }}
-                            trailColor="#f0f0f0"
-                            strokeWidth={8}
-                            showInfo={false}
-                            style={{ marginBottom: '4px' }}
-                          />
-                        </div>
+                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                      {category.skills.map((skill) => (
+                        <Tag
+                          key={skill}
+                          style={{ borderRadius: '12px', marginBottom: '4px', padding: '4px 12px', fontSize: '0.9rem', borderColor: category.color, color: 'var(--text-primary)', background: 'transparent' }}
+                        >
+                          {skill}
+                        </Tag>
                       ))}
                     </div>
                   </Card>
@@ -220,7 +169,7 @@ const Skills = () => {
                   Frontend Expertise
                 </h3>
                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                  {['React.js', 'Next.js', 'TypeScript', 'Ant Design', 'Modular SCSS'].map((tech, idx) => (
+                  {['React.js', 'TypeScript', 'Ant Design', 'HTML', 'CSS'].map((tech, idx) => (
                     <Tag key={idx} style={{ 
                       background: 'rgba(255,255,255,0.2)', 
                       border: 'none', 
@@ -248,10 +197,10 @@ const Skills = () => {
                 bodyStyle={{ padding: '40px 30px' }}
               >
                 <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>
-                  Backend & Database
+                  Backend & Data
                 </h3>
                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                  {['Node.js', 'PHP', 'PostgreSQL', 'MySQL', 'Redis'].map((tech, idx) => (
+                  {['Node.js', 'Python', 'PostgreSQL', 'Redis', 'Databricks'].map((tech, idx) => (
                     <Tag key={idx} style={{ 
                       background: 'rgba(255,255,255,0.2)', 
                       border: 'none', 
@@ -279,10 +228,10 @@ const Skills = () => {
                 bodyStyle={{ padding: '40px 30px' }}
               >
                 <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '20px', color: '#fff' }}>
-                  DevOps & Tools
+                  Cloud & Tools
                 </h3>
                 <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                  {['Azure', 'Git', 'Docker', 'Jira', 'VS Code'].map((tech, idx) => (
+                  {['Azure', 'Git', 'GitHub', 'RabbitMQ', 'gRPC'].map((tech, idx) => (
                     <Tag key={idx} style={{ 
                       background: 'rgba(255,255,255,0.2)', 
                       border: 'none', 

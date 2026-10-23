@@ -193,3 +193,27 @@ This project is open source and available under the [MIT License](LICENSE).
 ---
 
 **Made with ❤️ by Sahil Arya** 
+## 3D Workspace (src/experience)
+
+The site opens in an interactive 3D developer room (React Three Fiber). The previous scrolling portfolio is kept as the **Classic** view, which is also the automatic fallback when WebGL or the 3D scene is unavailable. The choice is remembered in `localStorage` (`portfolio-view`).
+
+- Controls: WASD / arrows / on-screen pad, click the floor, click glowing stations, drag to orbit, scroll or pinch to zoom, double-click to reset, `Esc` closes the panel.
+- Content lives in `src/data/portfolio.js` (add projects such as MDM Studio or Wormhole there).
+- Layout, collisions and station positions: `src/experience/sections.js`, `src/experience/collision.js`.
+
+### Avatar
+
+`src/experience/scene/config.js` controls the character.
+
+- `AVATAR.mode = 'procedural'`: a stylised athletic character built in code (`ProceduralHuman.js`) with procedural idle/breathing, blinking, walk, turn, cursor-following head and eyes, a wave that ends in a front double-biceps pose, and a short greeting. Skin, hair, beard, vest and joggers colours are in `HUMAN`. It is an approximation of the reference photo, not a scan.
+- `AVATAR.mode = 'glb'` (default): loads any rigged GLB with animation clips. Put the file in `public/models/`, set `AVATAR.url`, and adjust `AVATAR.clips` (substring match on clip names: idle, walk, turn, wave, greet) and `AVATAR.forwardOffset`. The model is auto-scaled to `AVATAR.height`. `RobotExpressive.glb` (CC0, three.js examples) is included as a working sample.
+
+To get a photo-accurate GLB, generate one with a tool such as Ready Player Me, Avaturn, Meshy or Tripo from the reference photo, retarget Mixamo animations if the result has none, then compress it: `npx gltf-transform optimize in.glb out.glb --compress meshopt --texture-compress webp`.
+
+### Optional contact endpoint
+
+The contact form opens a pre-filled email by default. To post to a form service instead, set `REACT_APP_CONTACT_ENDPOINT` (e.g. a Formspree URL) in the Vercel project environment variables.
+
+### Deploy
+
+Vercel auto-detects Create React App: `npm install`, `npm run build`, output `build/`. `vercel.json` adds long-lived caching for `/models/*`.

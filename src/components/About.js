@@ -39,21 +39,22 @@ const About = () => {
                 Senior Software Engineer & Systems Architect
               </h3>
               <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>
-                I'm a Senior Software Engineer at <strong>Polestar Analytics</strong> with 2+ years of experience building
-                enterprise-grade platforms. I've led the migration of a production monolith to a
-                <strong> Microfrontend Architecture</strong> enabling 4+ independent teams to ship in parallel, and
-                decomposed a Node.js backend into <strong>5+ Python microservices</strong> using gRPC, RabbitMQ, and Redis.
+                I'm a Senior Software Engineer at <strong>Polestar Analytics</strong> with nearly 3 years of experience building
+                scalable enterprise applications, data integration platforms, and AI-enabled analytics solutions using React.js,
+                TypeScript, Python, Node.js, and SQL. I led the migration of a production-scale frontend monolith to a
+                <strong> microfrontend architecture</strong> enabling 4+ independent teams to release in parallel, and
+                decomposed a Node.js monolith into <strong>5+ Python microservices</strong> using gRPC, RabbitMQ, and Redis.
               </p>
               <p style={{ fontSize: '1.1rem', lineHeight: 1.8, marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>
-                I engineered <strong>PromoPulse</strong> — an AI-powered promotion analytics module — integrating LLM and
-                predictive models with Databricks to generate ROI forecasting, scenario simulations, and campaign
-                effectiveness insights. I've also built intelligent OCR pipelines using <strong>Claude 4.6 Sonnet</strong> and
-                <strong> Llama 3</strong> achieving 92% extraction accuracy across enterprise documents.
+                I engineered <strong>PromoPulse</strong> — an AI-powered enterprise analytics platform that turns Databricks
+                datasets into LLM-driven recommendations, scenario simulations, and KPI forecasts. I've also built OCR and
+                document-processing pipelines using <strong>Claude Sonnet</strong>, <strong>Llama 3</strong>, and vector-search
+                retrieval, achieving 92% extraction accuracy with support for 128K-token context windows.
               </p>
               <p style={{ fontSize: '1.1rem', lineHeight: 1.8, color: 'var(--text-secondary)' }}>
-                Beyond engineering, I work directly with enterprise clients — Knipper, BDS, Zydus, and Insigneo — to
-                deliver tailored analytics solutions. I'm a recipient of multiple <strong>Quarterly Impact Awards</strong> and
-                a strong believer in clean architecture, measurable impact, and continuous growth.
+                I work directly with enterprise clients — Knipper, BDS, Zydus, and Insigneo — and I'm a recipient of multiple
+                <strong> Quarterly Impact Awards</strong> and a <strong>Databricks Certified Generative AI Engineer Associate</strong>,
+                focused on data quality, performance optimization, and reliable enterprise workflows.
               </p>
             </motion.div>
           </Col>
@@ -124,8 +125,8 @@ const About = () => {
                 <RocketOutlined style={{ fontSize: '3rem', color: '#1890ff', marginBottom: '20px' }} />
                 <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>AI & LLM Engineering</h4>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  Built AI-powered systems using Claude 4.6 Sonnet, Llama 3, and vector-search pipelines achieving
-                  92% extraction accuracy on enterprise documents with 128K token support.
+                  Built AI-powered systems using Claude Sonnet, Llama 3, and vector-search retrieval achieving
+                  92% extraction accuracy on enterprise documents with 128K-token context support.
                 </p>
               </Card>
             </Col>
@@ -143,8 +144,8 @@ const About = () => {
                 <TeamOutlined style={{ fontSize: '3rem', color: '#52c41a', marginBottom: '20px' }} />
                 <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>Distributed Systems</h4>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  Architected 5+ Python microservices using gRPC, RabbitMQ, and Redis enabling fault isolation,
-                  async processing, and high-throughput inter-service communication.
+                  Decomposed a Node.js monolith into 5+ Python microservices using gRPC, RabbitMQ, and Redis for
+                  asynchronous processing, service isolation, and reliable inter-service communication.
                 </p>
               </Card>
             </Col>
@@ -162,8 +163,8 @@ const About = () => {
                 <TrophyOutlined style={{ fontSize: '3rem', color: '#faad14', marginBottom: '20px' }} />
                 <h4 style={{ fontSize: '1.3rem', fontWeight: '600', marginBottom: '15px', color: 'var(--text-primary)' }}>Performance & Scale</h4>
                 <p style={{ color: 'var(--text-secondary)', lineHeight: 1.6 }}>
-                  Boosted API performance by ~30% (600ms → 420ms) and cut network payload 90% (2MB → 20KB/page)
-                  via Delta Lake query optimization and lazy loading strategies.
+                  Reduced API latency ~30% (600 ms → 420 ms) and per-page payload from 2 MB to 20 KB
+                  through server-side pagination, lazy loading, and optimized Delta Lake queries.
                 </p>
               </Card>
             </Col>

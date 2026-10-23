@@ -8,17 +8,17 @@ const Projects = () => {
     {
       id: 1,
       title: 'PacketLens',
-      description: 'A real-time network analysis dashboard streaming live data via WebSockets, classifying traffic across 20+ applications with custom binary parsers — zero external packet library dependencies.',
+      description: 'A real-time network analysis dashboard using WebSockets to stream live data and classify traffic across 20+ applications with custom binary parsers and no external packet-library dependencies.',
       longDescription: 'PacketLens is a high-performance network monitoring tool featuring a multi-threaded load balancer and a rule-based blocking engine. It provides real-time visibility into network traffic with deep packet inspection and intelligent traffic classification.',
       image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
       technologies: ['React.js', 'Node.js', 'Express', 'Socket.IO', 'Tailwind CSS'],
       features: [
-        'Real-time data streaming via WebSockets',
-        '20+ application traffic classification',
-        'Custom binary parsers (no external libs)',
-        'Multi-threaded load balancer',
-        'Rule-based blocking engine',
-        'IP, App, and Domain filtering'
+        'Live data streaming via WebSockets',
+        'Traffic classification across 20+ applications',
+        'Custom binary parsers (no external packet libraries)',
+        'Multithreaded load balancer with configurable parallel workers',
+        'Rule-based traffic-blocking engine',
+        'IP, application, and domain filtering'
       ],
       githubLink: 'https://github.com/Sahilarya20/PacketLens',
       liveLink: 'https://packet-lens-4lco.vercel.app/',
@@ -29,17 +29,17 @@ const Projects = () => {
     {
       id: 2,
       title: '1Platform',
-      description: 'Enterprise-grade B2B analytics and ETL SaaS platform enabling large-scale data ingestion, transformation, governance, and analytics workflows for 4+ enterprise clients.',
+      description: 'Enterprise B2B analytics and ETL SaaS platform supporting 4+ enterprise clients across data ingestion, transformation, governance, and analytics workflows.',
       longDescription: '1Platform is a comprehensive analytics and ETL SaaS solution built with React.js, Node.js, PostgreSQL, Azure, and Databricks. It automates complex SQL-based workflows and delivers significant performance gains for enterprise data pipelines.',
       image: 'https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
       technologies: ['React.js', 'Node.js', 'PostgreSQL', 'Azure', 'Databricks'],
       features: [
-        'Advanced ETL pipeline automation',
-        'Delta Lake optimized querying',
-        'API performance 600ms → 420ms',
-        'Network payload 2MB → 20KB/page',
-        'Enterprise client onboarding',
-        'Data governance & analytics'
+        'Data ingestion, validation, and transformation workflows',
+        'Automated manual SQL operations (~90% less data-engineering effort)',
+        'API latency 600 ms → 420 ms',
+        'Per-page payload 2 MB → 20 KB',
+        'Server-side pagination and lazy loading',
+        'Optimized Delta Lake queries'
       ],
       githubLink: '#',
       liveLink: 'https://mdm.polestarllp.com/login',

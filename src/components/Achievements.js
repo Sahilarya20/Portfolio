@@ -9,7 +9,7 @@ const Achievements = () => {
       id: 1,
       title: 'Quarterly Impact Award – Dashing Debut',
       organization: 'Polestar Analytics',
-      description: 'Recognized for exceptional performance and outstanding contribution during the first quarter at Polestar Analytics.',
+      description: 'Received a Quarterly Impact Award at Polestar Analytics.',
       icon: <TrophyOutlined />,
       color: '#faad14',
       date: '2024',
@@ -19,7 +19,7 @@ const Achievements = () => {
       id: 2,
       title: 'Quarterly Impact Award – Rising Star',
       organization: 'Polestar Analytics',
-      description: 'Awarded Rising Star recognition for consistently high impact and leadership contributions across quarters.',
+      description: 'Received a Quarterly Impact Award at Polestar Analytics.',
       icon: <StarOutlined />,
       color: '#eb2f96',
       date: '2024',
@@ -27,13 +27,23 @@ const Achievements = () => {
     },
     {
       id: 3,
-      title: 'Appreciation Certificate for ProfitPulse',
+      title: 'Appreciation Certificate for PromoPulse',
       organization: 'Polestar Analytics',
-      description: 'Received appreciation for developing high-quality asset ProfitPulse that significantly improved financial analytics for clients.',
+      description: 'Received an Appreciation Certificate for developing PromoPulse to improve financial analytics for clients.',
       icon: <GiftOutlined />,
       color: '#52c41a',
       date: '2024',
       category: 'Project Recognition'
+    },
+    {
+      id: 5,
+      title: 'Databricks Certified Generative AI Engineer Associate',
+      organization: 'Databricks',
+      description: 'Earned the Databricks Certified Generative AI Engineer Associate certification.',
+      icon: <CrownOutlined />,
+      color: '#fa541c',
+      date: 'Certification',
+      category: 'Certification'
     },
     {
       id: 4,

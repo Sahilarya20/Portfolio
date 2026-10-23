@@ -11,30 +11,30 @@ const Experience = () => {
     {
       title: 'Senior Software Engineer',
       company: 'Polestar Analytics',
-      location: 'Noida, India',
+      location: 'India',
       duration: 'September 2025 – Present',
       achievements: [
-        'Led frontend modernization by migrating a production-scale monolithic application to a Microfrontend Architecture, enabling 4+ independent teams to ship in parallel, improving scalability, deployment independence, and maintainability across business modules.',
-        'Architected distributed backend systems by decomposing a Node.js monolith into 5+ Python microservices using gRPC, RabbitMQ, and Redis, enabling efficient asynchronous processing, fault isolation, and high-throughput inter-service communication.',
-        'Engineered and launched PromoPulse, an AI-powered promotion analytics and optimization module that processes enterprise datasets from Databricks and applies LLM and predictive AI models to generate optimized promotional recommendations, scenario simulations, and forecasting insights for KPIs such as ROI, trade spend, revenue uplift, and campaign effectiveness.',
-        'Developed intelligent OCR and document automation systems using Claude 4.6 Sonnet, Llama 3, and vector-search-based retrieval pipelines to extract, classify, and transform unstructured enterprise documents with 92% extraction accuracy, supporting context windows up to 128K tokens for large-document processing workflows.'
+        'Led the migration of a production-scale frontend monolith to a microfrontend architecture, enabling 4+ independent teams to develop and release features in parallel while improving scalability, maintainability, and deployment independence.',
+        'Decomposed a Node.js monolith into 5+ Python microservices using gRPC, RabbitMQ, and Redis, enabling asynchronous processing, service isolation, and reliable inter-service communication.',
+        'Engineered and launched PromoPulse, an AI-powered enterprise analytics platform that processes Databricks datasets and generates LLM-driven recommendations, scenario simulations, and KPI forecasts for ROI, trade spend, revenue uplift, and campaign effectiveness.',
+        'Developed OCR and document-processing pipelines using Claude Sonnet, Llama 3, and vector-search retrieval to transform unstructured PDFs, invoices, reports, and emails into structured data, achieving 92% extraction accuracy with support for 128K-token context windows.'
       ],
-      technologies: ['React.js', 'Microfrontend', 'Python', 'gRPC', 'RabbitMQ', 'Redis', 'Databricks', 'LLM', 'Claude 4.6 Sonnet', 'Llama 3'],
+      technologies: ['React.js', 'Microfrontend', 'Python', 'gRPC', 'RabbitMQ', 'Redis', 'Databricks', 'LLM', 'Claude Sonnet', 'Llama 3'],
       type: 'Full-time',
       primary: true
     },
     {
       title: 'Software Engineer',
       company: 'Polestar Analytics',
-      location: 'Noida, India',
-      duration: 'November 2023 – August 2025',
+      location: 'India',
+      duration: 'November 2023 � August 2025',
       achievements: [
-        'Engineered and scaled 1Platform, an enterprise-grade B2B analytics and ETL SaaS platform using React.js, Node.js, PostgreSQL, Azure, and Databricks, onboarding 4+ enterprise clients and enabling large-scale data ingestion, transformation, governance, and analytics workflows.',
-        'Built advanced ETL ingestion and transformation pipelines that automated complex manual SQL-based workflows, reducing data engineering effort by approximately 90% and significantly accelerating enterprise pipeline creation and execution.',
-        'Boosted API performance by ~30% (600ms → 420ms) using server-side pagination, lazy loading, and optimized Delta Lake querying strategies, reducing network payload from 2MB to 20KB/page and cutting network transfer overhead by approximately 90%.',
-        'Collaborated directly with 4 enterprise clients including Knipper, BDS, Zydus, and Insigneo to deliver tailored PoCs, workflow automations, analytics solutions, and enterprise data platforms aligned with business requirements.'
+        'Developed and scaled 1Platform, an enterprise B2B analytics and ETL SaaS platform using React.js, Node.js, PostgreSQL, Microsoft Azure, and Databricks. Supported 4+ enterprise clients across data ingestion, transformation, governance, and analytics workflows.',
+        'Built data ingestion, validation, and transformation workflows that automated complex manual SQL operations, reducing data-engineering effort by approximately 90% and accelerating pipeline creation and execution.',
+        'Improved application performance by reducing API latency approximately 30%, from 600 ms to 420 ms, through server-side pagination, lazy loading, and optimized Delta Lake queries; reduced per-page payload size from 2 MB to 20 KB.',
+        'Collaborated with four enterprise clients�Knipper, BDS, Zydus, and Insigneo�to deliver proof-of-concept solutions, workflow automation, analytics features, and customer-specific data platforms.'
       ],
-      technologies: ['React.js', 'Node.js', 'PostgreSQL', 'Azure', 'Databricks', 'Python', 'ETL'],
+      technologies: ['React.js', 'Node.js', 'PostgreSQL', 'Azure', 'Databricks', 'Delta Lake', 'ETL'],
       type: 'Full-time',
       primary: false
     }
@@ -501,10 +501,10 @@ const Experience = () => {
                 </h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   {[
-                    'Reduced processing time by 25%',
-                    'Boosted API performance by 30%',
-                    'Cut network transfer by 90%',
-                    'Enhanced maintainability across 12 components'
+                    'Reduced API latency ~30% (600 ms → 420 ms)',
+                    'Cut per-page payload from 2 MB to 20 KB',
+                    'Reduced data-engineering effort ~90%',
+                    '92% OCR extraction accuracy with 128K-token context'
                   ].map((item, idx) => (
                     <motion.div
                       key={idx}
@@ -565,10 +565,10 @@ const Experience = () => {
                 </h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                   {[
-                    'Built comprehensive B2B SaaS platforms',
-                    'Implemented LLM-based automation',
-                    'Delivered multiple client PoCs',
-                    'Integrated modern payment systems'
+                    'Built enterprise B2B analytics and ETL platforms',
+                    'Led a microfrontend migration for 4+ teams',
+                    'Decomposed a monolith into 5+ Python microservices',
+                    'Delivered client PoCs and workflow automation'
                   ].map((item, idx) => (
                     <motion.div
                       key={idx}

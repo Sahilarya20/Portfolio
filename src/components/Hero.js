@@ -146,7 +146,7 @@ const Hero = () => {
                     'Full Stack Developer',
                     'Microfrontend Architect',
                     'AI & LLM Integrations',
-                    'Problem Solver'
+                    'Data Integration & ETL'
                   ]}
                   typeSpeed={50}
                   backSpeed={50}
@@ -167,8 +167,8 @@ const Hero = () => {
                   lineHeight: 1.6,
                 }}
               >
-                Building enterprise-scale analytics platforms, AI-powered automation systems,
-                and distributed microservice architectures that drive measurable business impact.
+                Software Engineer with nearly 3 years of experience building scalable enterprise applications,
+                data integration platforms, and AI-enabled analytics solutions.
               </p>
             </motion.div>
 

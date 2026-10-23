@@ -10,15 +10,20 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.2.6",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@react-three/postprocessing": "^2.19.1",
+    "antd": "^5.12.8",
+    "aos": "^2.3.4",
+    "framer-motion": "^10.16.16",
+    "postprocessing": "^6.39.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1",
     "react-scripts": "^5.0.1",
-    "antd": "^5.12.8",
-    "framer-motion": "^10.16.16",
-    "aos": "^2.3.4",
     "react-typed": "^2.0.12",
-    "@ant-design/icons": "^5.2.6",
-    "react-router-dom": "^6.20.1"
+    "three": "^0.170.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.45",
@@ -36,4 +41,4 @@
       "last 1 safari version"
     ]
   }
-} 
+}
